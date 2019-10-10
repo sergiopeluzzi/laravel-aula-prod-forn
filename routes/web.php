@@ -29,11 +29,5 @@ Route::get('/produtos', 'ProdutosController@index')->name('produtos.index');
 Route::get('/produtos/novo', 'ProdutosController@create')->name('produtos.create')->middleware('auth');
 Route::post('/produtos', 'ProdutosController@store')->name('produtos.store')->middleware('auth');
 Route::get('/produtos/edit/{id}', 'ProdutosController@edit')->name('produtos.edit')->middleware('auth');
-
-
-
-
-
-
 Route::put('/produtos/{id}', 'ProdutosController@update')->name('produtos.update')->middleware('auth');
 Route::delete('/produtos/{id}', 'ProdutosController@destroy')->name('produtos.destroy')->middleware('auth');

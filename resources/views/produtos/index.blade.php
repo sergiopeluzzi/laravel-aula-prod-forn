@@ -34,6 +34,7 @@
                                 <td>{{ $p->fornecedor }}</td>
                                 <td>
                                     <a href="{{ route('produtos.edit', $p->id) }}" class="btn btn-sm btn-info">Editar</a>
+                                    
                                     <form method="POST" action="{{ route('produtos.destroy', $p->id) }}">
                                         @csrf
                                         @method('DELETE')
