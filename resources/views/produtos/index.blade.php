@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -13,7 +12,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="card-header">{{ $titulo }}</div>
+                <div class="card-header">{{ $tit }}</div>
 
                 <div class="card-body">
                     <table class="table table-bordered table-striped">
@@ -25,9 +24,8 @@
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody>
-                    
-                            @foreach($produtos as $p)
+                        <tbody>                    
+                            @foreach($prods as $p)
                             <tr>
                                 <td>{{ $p->id }}</td>    
                                 <td>{{ $p->descricao }}</td>    
@@ -44,6 +42,7 @@
                             </tr>    
                             @endforeach
                         </tbody>
+                        {{ $prods->links() }}
                     </table>
                 </div>
             </div>

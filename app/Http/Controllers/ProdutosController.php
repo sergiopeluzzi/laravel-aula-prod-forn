@@ -10,9 +10,9 @@ class ProdutosController extends Controller
     public function index() {
 
         $titulo = 'Produtos';
-        $produtos = Produto::all();
+        $produtos = Produto::paginate(4);
 
-        return view('produtos.index', ["titulo" => $titulo, "produtos" => $produtos]);
+        return view('produtos.index', ["tit" => $titulo, "prods" => $produtos]);
     }
 
     public function create() {
